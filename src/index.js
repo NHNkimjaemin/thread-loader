@@ -23,6 +23,7 @@ function pitch() {
       }),
       resource: this.resourcePath + (this.resourceQuery || ''),
       sourceMap: this.sourceMap,
+	  emitData: this.emitData,
       emitError: this.emitError,
       emitWarning: this.emitWarning,
       loadModule: this.loadModule,

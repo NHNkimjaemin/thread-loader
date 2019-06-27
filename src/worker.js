@@ -219,6 +219,14 @@ const queue = asyncQueue(({ id, data }, taskCallback) => {
               data: toErrorObj(warning),
             });
           },
+          emitData: (request, transferData) => {
+            writeJson({
+              type: 'emitData',
+              id,
+              request,
+              data: transferData,
+            });
+          },
           emitError: (error) => {
             writeJson({
               type: 'emitError',
