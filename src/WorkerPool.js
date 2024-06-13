@@ -267,6 +267,10 @@ class PoolWorker {
               result,
             });
           });
+        }
+        finalCallback();
+        break;
+      }
       case 'emitData': {
         const { request, data } = message;
         const { data: jobData } = this.jobs[id];
